@@ -1,32 +1,38 @@
-#pragma once
+﻿#pragma once
 #include<iostream>
+#include <iomanip>
 using namespace std;
 #define MAX 100
 class Matrix
 {
 private:
-	double** _a;//ma trận 2 chiều
-	int _row;//số hàng của ma trận
-	int _col;//số cột của ma trận
+	double **_a;//ma tran 2 chieu
+	int _row;//so hang cua ma tran
+	int _col;//số cot ma tran
 public:
-	int Row() { return _row; }//hàm getter số hàng của ma trận
-	int Col() { return _col; }//hàm getter so cột của ma trận
-	void SetRow(int row) { _row = row; }//hàm setter số hàng
-	void SetCol(int col) { _col = col; }//hàm setter số cột
+	int Row() { return _row; }// getter so hang cua ma tran
+	int Col() { return _col; }//getter so cot cua ma tran
+	void SetRow(int row) { _row = row; }//setter so hang
+	void SetCol(int col) { _col = col; }// setter so cot
 public:
-	Matrix();
-	Matrix(int, int);
-	~Matrix();
-	Matrix(const Matrix&);
+	Matrix(); //ham tao khong co tham so
+	Matrix(int,int); //ham tao co tham so truyen vao
+	Matrix(const Matrix&); //ham tao sao chep
+	~Matrix();//ham huy
 public:
-	void input();//hàm nhập ma trận
-	void output();//hàm xuất ma trận
-	double GetAt(int, int);
-	void multiTo(Matrix*);
-	Matrix toEchelon();
-	double detMatrix();
-	int rankMatrix();
-	Matrix inverseMatrix();
-	void Equation(double b[100]);
+	void input();//phuong thuc nhap ma tran
+	void output();//xuat ma tran
+	double GetAt(int, int); // lay gia tri cua ma tran tai phan tu thu i,j
+	void multiTo(Matrix*);//nhan 2 ma tran
+	Matrix* MultiTo(Matrix*); //nhan 2 ma tran
+	Matrix toEchelon();//dua ma tran ve dang bac thang
+	double detMatrix();// dinh thuc ma tran
+	int rankMatrix();// hang cua ma tran
+	Matrix inverseMatrix(); //tim nghich dao ma tran
+	
+	void inputEquation(double*&);//nhap he phuong trinh tuyen tinh
+	void outputEquation(double*);// xuat he phuong trinh tuyen tinh
+	void Equation(double*);//giai he phuong trinh tuyen tinh
 };
-void menu(Matrix*);
+
+void menu(Matrix*); //quản lí các thao tác trên ma trận

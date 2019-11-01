@@ -21,10 +21,10 @@ QuanLy::~QuanLy()
 }
 void QuanLy::control()
 {
-	int choose;//biến để lưu lựa chọn người dùng nhập
+	int choose;//bien luu lua chon nguoi dung nhap
 	while (1)
 	{
-		system("cls"); //xóa màn hình
+		system("cls"); //xoa man hinh sau moi lan lap
 		cout << "\n\t===================================UNG DUNG HO TRO HOC TAP====================================" << endl;
 		cout << "\n\t\t\t\t\t\t1. Ham Bool";
 		cout << "\n\t\t\t\t\t\t2. Vector";
@@ -33,24 +33,24 @@ void QuanLy::control()
 		cout << "\n\t==============================================================================================" << endl << endl;
 		cout << "nhap lua chon cua ban: ";
 		cin >> choose;
-		if (choose == 1) //nếu người dùng nhập 1 thì gọi hàm quản lí các thao tác trên hàm bool
+		if (choose == 1) //neu nguoi dung nhap 1
 		{
 			_boole = new Bool();
-			menu(_boole);
+			menu(_boole); // goi menu ham bool
 		}
-		else if (choose == 2) //nếu người dùng nhập 2 thỉ gọi hàm quản lí các thao tác trên vector
+		else if (choose == 2) //neu nguoi dung nhap 2
 		{
 			Vector* p = new Vector(0);
-			menu(p);
+			menu(p); // goi menu vector
 		}
-		else if (choose == 3) //nếu người dùng nhập 3 thì gọi hàm quản lí các thao tác trên ma trận
+		else if (choose == 3) //neu nguoi dung nhap 3
 		{
 			Matrix* p = new Matrix(0, 0);
-			menu(p);
+			menu(p); // goi menu ma tran
 		}
-		else if (choose == 0) //nếu người dùng nhập 0 thì thoát chương trình
+		else if (choose == 0) //neu nguoi dung nhap 0
 		{
-			break;
+			break; //thoat khoi vong lap
 		}
 	}
 

@@ -7,8 +7,8 @@ int main()
 {
 	QuanLy control = QuanLy();
 	
-	control.control();
+	control.control(); // quan li ca chuong trinh
 
-	system("pause"); // dừng màn hình để xem kết quả
+	system("pause"); // dung man hinh de xem ket qua
 	return 0;
 }
